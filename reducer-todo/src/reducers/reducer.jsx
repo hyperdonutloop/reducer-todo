@@ -4,7 +4,9 @@ export const initialState = {
   id: 3849547372
 }
 
-export function reducer(state = initialState, action) {
-  
-  return state;
+export function reducer(state, action) {
+  switch(action.type) {
+    default:
+      return state
+  }
 }
