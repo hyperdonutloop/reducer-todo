@@ -30,7 +30,7 @@ export function reducer(state, action) {
         }
       })
     case 'CLEAR_COMPLETED':
-      console.log('clicking clear completed works');
+      // console.log('clicking clear completed works');
       return state.filter(element => element.completed === false)
   }
 }

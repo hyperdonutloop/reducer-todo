@@ -1,13 +1,11 @@
-import React, { useReducer, useState } from 'react';
+import React from 'react';
 import Todo from './Todo';
 
 const TodoList = (props) => {
-
-  console.log(props.state);
   
   return (
+    
     <div className="todo-list">
-      <h1>This is my List</h1>
       {props.state.map(item => (
         <Todo
         key={item.id}

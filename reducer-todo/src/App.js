@@ -8,6 +8,10 @@ import './Todo.css';
 
 function App() {
   const [ state, dispatch ] = useReducer(reducer, initialState);
+  //useReducer is like a custom hook of useState
+  //const state will = initialState
+  //dispatch (kind of like setNewItem) is reducer functions
+  //reducer functions are like mini setStates
   const [ newItem, setNewItem ] = useState();
   
   

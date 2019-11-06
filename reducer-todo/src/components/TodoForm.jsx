@@ -7,11 +7,11 @@ const TodoForm = (props) => {
      <form onSubmit={props.handleSubmit}>
        <label htmlFor="item">New Task</label>
        <input
-        type="text"
-        name="item"
-        id="item"
-        value={props.newItem}
-        onChange={props.handleChanges}
+          type="text"
+          name="item"
+          id="item"
+          value={props.newItem}
+          onChange={props.handleChanges}
        />
        <button>Add Task!</button>
      </form>
