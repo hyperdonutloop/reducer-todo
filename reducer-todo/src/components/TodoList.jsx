@@ -5,7 +5,7 @@ const TodoList = (props) => {
   
   return (
     
-    <div className="todo-list">
+    <ul className="todo-list">
       {props.state.map(item => (
         <Todo
         key={item.id}
@@ -20,7 +20,7 @@ const TodoList = (props) => {
           <span role="img" aria-label="celebration">🎉</span>
         </button>
       </div>
-    </div>
+    </ul>
   )
 }
 
