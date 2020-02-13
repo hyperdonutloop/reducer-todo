@@ -1,14 +1,19 @@
 import React from "react";
 
+import  { Wrapper }  from './styles/Todo-Styles.jsx';
+
 const Todo = props => {
   return (
-    <div
-      className={`item${props.item.completed ? 'completed' : ''}`}
-      onClick={() => props.toggleCompleted(props.item.id)}>
-      <p>{props.item.item}</p>
-
-    </div>
-
+    <Wrapper>
+      <ul className="todos">
+        <li
+          className={`item${props.item.completed ? 'completed' : ''}`}
+          onClick={() => props.toggleCompleted(props.item.id)}>
+          <p>{props.item.item}</p>
+        </li>
+      </ul>
+      
+    </Wrapper>
   )
 }
 

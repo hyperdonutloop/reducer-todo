@@ -56,7 +56,7 @@ function App() {
         toggleCompleted={toggleCompleted}
         clearCompleted={clearCompleted}
       />
-      <div>
+      <div className="day">
         Get your sh*t done and have a great {day}
       </div>
     </div>
