@@ -6,6 +6,7 @@ import { reducer, initialState } from './reducers/reducer';
 import './Todo.css';
 
 
+
 function App() {
   const [ state, dispatch ] = useReducer(reducer, initialState);
   //useReducer is like a custom hook of useState
@@ -13,6 +14,13 @@ function App() {
   //dispatch (kind of like setNewItem) is reducer functions
   //reducer functions are like mini setStates
   const [ newItem, setNewItem ] = useState();
+
+  const [ day, setDay ] = React.useState('day')
+
+  React.useEffect(() => {
+    const days = 'Sunday Monday Tuesday Wednesday Thursday Friday Saturday'
+    setDay(days.split(' ')[new Date().getDay()])
+  }, [])
   
   
   const handleSubmit = e => {
@@ -37,7 +45,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="container">
       <TodoForm 
         handleSubmit={handleSubmit} 
         handleChanges={handleChanges} 
@@ -48,6 +56,9 @@ function App() {
         toggleCompleted={toggleCompleted}
         clearCompleted={clearCompleted}
       />
+      <div>
+        Get your sh*t done and have a great {day}
+      </div>
     </div>
   );
 }

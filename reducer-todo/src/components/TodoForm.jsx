@@ -13,7 +13,7 @@ const TodoForm = (props) => {
           value={props.newItem}
           onChange={props.handleChanges}
        />
-       <button>Add Task!</button>
+       <button className="button">Add Task!</button>
      </form>
     </div>
   )
