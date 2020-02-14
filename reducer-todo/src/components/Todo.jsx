@@ -18,6 +18,9 @@ const Wrapper = styled.div`
 
  .todos {
    background-color: #27292d;
+   /* padding: 1rem; */
+   /* margin: 4px; */
+  
 
     &:first-child {
       border-top-left-radius: 4px;
