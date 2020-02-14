@@ -1,26 +1,15 @@
 import React from 'react';
 import Todo from './Todo';
 
-const TodoList = (props) => {
-  
+const TodoList = ({ state, dispatch }) => {
+  const newItem = () => {
+    return state.map(todo => <Todo {...todo} dispatch={dispatch} />)
+  };
   return (
     
-    <ul className="todo-list">
-      {props.state.map(item => (
-        <Todo
-        key={item.id}
-        item={item}
-        toggleCompleted={props.toggleCompleted}
-        />
-      ))}
-      <div className="button">
-        <button 
-          className="clear-btn" onClick={props.clearCompleted}>Clear Completed Tasks 
-          &nbsp; 
-          <span role="img" aria-label="celebration">🎉</span>
-        </button>
-      </div>
-    </ul>
+    <div className="todo-list">
+      {newItem()}
+    </div>
   )
 }
 

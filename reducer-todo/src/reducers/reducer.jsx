@@ -5,7 +5,7 @@ export const initialState = [
       id: 1
     },
     {
-      item: 'Learn About Pizza',
+      item: 'Get Donuts 🍩',
       completed: false,
       id: 2
     }
@@ -21,16 +21,19 @@ export function reducer(state, action) {
         id: Date.now()
       };
       return [ ...state, newTodo ];
-    case 'TOGGLE_COMPLETED':
-      return state.map(element => {
-        if (element.id === action.payload){
-          return { ...element, completed: !element.completed} 
+
+    case 'TOGGLE_TODO':
+      return state.map(item => {
+        if (item.id === action.payload){
+          return { ...item, completed: !item.completed} 
         } else {
-          return element;
+          return item;
         }
       })
     case 'CLEAR_COMPLETED':
       // console.log('clicking clear completed works');
-      return state.filter(element => element.completed === false)
+      return state.filter(item => item.completed === false);
+      // default:
+      //   return state;
   }
 }
