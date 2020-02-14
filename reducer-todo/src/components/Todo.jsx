@@ -18,8 +18,11 @@ const Wrapper = styled.div`
 
  .todos {
    background-color: #27292d;
-   /* padding: 1rem; */
-   /* margin: 4px; */
+   /* transition: background-color 0.2s; */
+   /* display: flex; */
+   /* text-align: center; */
+   padding: 0.9rem;
+   margin: 4px;
   
 
     &:first-child {

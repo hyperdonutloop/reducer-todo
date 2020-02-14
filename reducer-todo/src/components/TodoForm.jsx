@@ -6,8 +6,11 @@ const TodoForm = ({ dispatch }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch({ type: 'ADD_TODO', payload: todo });
-    setTodo('');
+    if (todo.length > 0 ) {
+      dispatch({ type: 'ADD_TODO', payload: todo });
+      setTodo('');
+    }
+    
   };
 
   const handleClear = () => {
@@ -18,8 +21,8 @@ const TodoForm = ({ dispatch }) => {
   return (
     <Wrapper>
       <div className="tasks">
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="item">New Task</label>
+        {/* <form onSubmit={handleSubmit}> */}
+          {/* <label htmlFor="item">New Task</label> */}
           <input
               type="text"
               placeholder="enter things here"
@@ -29,9 +32,9 @@ const TodoForm = ({ dispatch }) => {
               onChange={e => setTodo(e.target.value)}
               // ref="items"
           />
-          <button className="button" type="submit">Add Task!</button>
+          <button className="button" type="submit" onClick={handleSubmit} >Add Task!</button>
           <button className="clear-btn" onClick={handleClear}>Clear Completed</button>
-        </form>
+        {/* </form> */}
       </div>
     </Wrapper>
     
