@@ -2,8 +2,11 @@ import React, { useReducer, useState } from 'react';
 import './App.css';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
+import Header from './components/Header.jsx';
 import { reducer, initialState } from './reducers/reducer';
 import './Todo.css';
+
+
 
 function App() {
   const [ state, dispatch ] = useReducer(reducer, initialState);
@@ -24,7 +27,7 @@ function App() {
   return (
     
     <div className="container">
-      <h2>localtodo-react</h2>
+      <Header />
       <TodoForm 
         dispatch={dispatch}
       />
