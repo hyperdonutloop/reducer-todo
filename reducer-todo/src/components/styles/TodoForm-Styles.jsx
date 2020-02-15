@@ -3,6 +3,13 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   .tasks {
     padding: 1rem;
+
+    @media only screen and (max-width: 400px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 2px solid green;
+    }
   }
 
   .todo-input {
@@ -15,6 +22,11 @@ export const Wrapper = styled.div`
     margin: 1rem;
     border-radius:2em;
     text-align: center;
+
+    @media only screen and (max-width: 400px) {
+      width: auto;
+    }
+
   }
 
   .circle-btn {
@@ -25,6 +37,13 @@ export const Wrapper = styled.div`
     text-align: center;
     margin-right: 0.8rem;
     background-color: #FFFFFF;
+
+    @media only screen and (max-width: 400px) {
+      margin: auto;
+      margin-bottom: 0.4rem;
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .remove-btn {
@@ -34,6 +53,12 @@ export const Wrapper = styled.div`
     padding:0.3em 1.2em;
     text-align: center;
     background-color: #FFFFFF;
+
+    @media only screen and (max-width: 400px) {
+      margin: auto;
+      display: flex;
+      justify-content: center;
+    }
     
   }
 

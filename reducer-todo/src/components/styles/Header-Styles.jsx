@@ -5,6 +5,10 @@ export const Wrapper = styled.div`
     margin: auto;
     max-width: 300px;
     /* border: 2px dashed green; */
+
+    @media only screen and (max-width: 400px) {
+      max-width: 250px;
+    }
   }
 
   h1 {
