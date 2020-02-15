@@ -20,13 +20,13 @@ function App() {
   
   const date = new Date();
     var weekday = new Array(7);
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Have an amazing FRIDAY 🎉";
-    weekday[6] = "Saturday";
+    weekday[0] = "It's Sunday, relax 🏖";
+    weekday[1] = "Get motivated, it's Monday ☕️";
+    weekday[2] = "Tuesday's not so bad 🌮";
+    weekday[3] = "You made it to Wednesday 🐪";
+    weekday[4] = "Thursday is Friday-eve 🎄";
+    weekday[5] = "It's Friday 🙌🏼";
+    weekday[6] = "It's Saturday, go have fun 🏄🏻‍♂️";
     
     var today = weekday[date.getDay()];
     console.log(today);
