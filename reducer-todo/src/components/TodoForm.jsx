@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Wrapper } from './styles/TodoForm-Styles.jsx';
 
 //material ui
+import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button'
 import AddIcon from '@material-ui/icons/Add';
 import NoteAddSharpIcon from '@material-ui/icons/NoteAddSharp';
 import CloseSharpIcon from '@material-ui/icons/CloseSharp';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 
 const TodoForm = ({ dispatch }) => {
   const [ todo, setTodo ] = useState('');
@@ -27,29 +29,35 @@ const TodoForm = ({ dispatch }) => {
   return (
     <Wrapper>
       <div className="tasks">
-        {/* <form onSubmit={handleSubmit}> */}
-          {/* <label htmlFor="item">New Task</label> */}
           <input
               className="todo-input"
               type="text"
-              placeholder="what do ya wanna do"
+              placeholder=" add something!"
               name="todo"
               id="item"
               value={todo}
               onChange={e => setTodo(e.target.value)}
               // ref="items"
           />
-          <Button size="small" variant="contained">
-          <AddIcon
-            className="button" 
-            type="submit" 
-            onClick={handleSubmit}>
-          </AddIcon>
-          </Button>
-          <Button size="small" variant="contained">
-            <CloseSharpIcon className="clear-btn" onClick={handleClear}></CloseSharpIcon>
-          </Button>
-        {/* </form> */}
+          {/* <AddCircleIcon style={{color: "#FFFFFF"}} className={classes.root}> */}
+            <button
+              // style={{ backgroundColor: "#383B40"}}
+              // variant="outlined"
+              
+              className="circle-btn bouncy" 
+              type="submit" 
+              onClick={handleSubmit}>Add
+            </button>
+          {/* </AddCircleIcon> */}
+
+          {/* <Button className={classes.root} style={{ backgroundColor: "#383B40"}} size="small" variant="outlined"> */}
+            <button
+              style={{animationDelay: "0.07s"}}
+              className="remove-btn bouncy" 
+              onClick={handleClear}>Remove
+            </button>
+          {/* </Button> */}
+        
       </div>
     </Wrapper>
     

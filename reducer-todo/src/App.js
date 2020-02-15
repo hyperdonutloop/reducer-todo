@@ -6,6 +6,9 @@ import Header from './components/Header.jsx';
 import { reducer, initialState } from './reducers/reducer';
 import './Todo.css';
 
+import { Wrapper } from './components/styles/App-Styles.jsx';
+
+
 
 
 function App() {
@@ -20,25 +23,26 @@ function App() {
   
 
   React.useEffect(() => {
-    const days = 'Sunday Monday Tuesday Wednesday Thursday Friday Saturday'
+    const days = 'Sunday Monday Tuesday Wednesday Thursday Friday🏄🏻‍♂️ Saturday'
     setDay(days.split(' ')[new Date().getDay()])
   }, [])
 
   return (
-    
-    <div className="container">
-      <Header />
-      <TodoForm 
-        dispatch={dispatch}
-      />
-      <TodoList 
-        state={state} 
-        dispatch={dispatch}
-      />
-      <div className="day">
-        Get your sh*t done and have a great {day}
+    <Wrapper>
+      <div className="container">
+        <Header />
+        <TodoForm 
+          dispatch={dispatch}
+        />
+        <TodoList 
+          state={state} 
+          dispatch={dispatch}
+        />
+        <div className="day">
+          Have a productive {day}
+        </div>
       </div>
-    </div>
+    </Wrapper>
   );
 }
 
