@@ -24,6 +24,7 @@ export const Wrapper = styled.div`
     padding:0.3em 1.2em;
     text-align: center;
     margin-right: 0.8rem;
+    background-color: #FFFFFF;
   }
 
   .remove-btn {
@@ -32,6 +33,7 @@ export const Wrapper = styled.div`
     outline-style: none;
     padding:0.3em 1.2em;
     text-align: center;
+    background-color: #FFFFFF;
     
   }
 
