@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   .tasks {
-    border: 2px dotted greenyellow;
     padding: 1rem;
   }
 
@@ -13,6 +12,9 @@ export const Wrapper = styled.div`
     width: 10rem;
     outline: none;
     border: 0px;
+    margin: 1rem;
+    border-radius:2em;
+    text-align: center;
   }
 
   .circle-btn {
@@ -20,8 +22,8 @@ export const Wrapper = styled.div`
     outline-color: transparent;
     outline-style: none;
     padding:0.3em 1.2em;
-    margin: 0 0.3em 0.3em 0;
     text-align: center;
+    margin-right: 0.8rem;
   }
 
   .remove-btn {
@@ -29,8 +31,8 @@ export const Wrapper = styled.div`
     outline-color: transparent;
     outline-style: none;
     padding:0.3em 1.2em;
-    margin: 0 0.3em 0.3em 0;
     text-align: center;
+    
   }
 
   .bouncy {

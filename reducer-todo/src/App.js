@@ -18,14 +18,18 @@ function App() {
   //dispatch (kind of like setNewItem) is reducer functions
   //reducer functions are like mini setStates
   
-
-  const [ day, setDay ] = React.useState('day')
-  
-
-  React.useEffect(() => {
-    const days = 'Sunday Monday Tuesday Wednesday Thursday Friday🏄🏻‍♂️ Saturday'
-    setDay(days.split(' ')[new Date().getDay()])
-  }, [])
+  const date = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Have an amazing FRIDAY 🎉";
+    weekday[6] = "Saturday";
+    
+    var today = weekday[date.getDay()];
+    console.log(today);
 
   return (
     <Wrapper>
@@ -39,7 +43,7 @@ function App() {
           dispatch={dispatch}
         />
         <div className="day">
-          Have a productive {day}
+          {today}
         </div>
       </div>
     </Wrapper>

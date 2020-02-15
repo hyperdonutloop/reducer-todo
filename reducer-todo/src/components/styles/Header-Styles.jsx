@@ -14,6 +14,10 @@ export const Wrapper = styled.div`
     color: #FFFFFF;
   }
 
+  .things {
+    margin-top: 0.7rem;
+  }
+
 
 `;
 
