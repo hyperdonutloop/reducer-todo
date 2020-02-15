@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
     border-radius:2em;
     text-align: center;
 
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 450px) {
       width: auto;
     }
 
@@ -38,7 +38,7 @@ export const Wrapper = styled.div`
     margin-right: 0.8rem;
     background-color: #FFFFFF;
 
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 450px) {
       margin: auto;
       margin-bottom: 0.4rem;
       display: flex;
