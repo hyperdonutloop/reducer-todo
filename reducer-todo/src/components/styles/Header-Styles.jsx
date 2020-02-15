@@ -10,6 +10,10 @@ export const Wrapper = styled.div`
     color: #CE9ECE;
   }
 
+  .reactword {
+    color: #FFFFFF;
+  }
+
 
 `;
 
