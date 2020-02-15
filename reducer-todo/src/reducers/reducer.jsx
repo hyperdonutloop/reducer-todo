@@ -1,11 +1,11 @@
 export const initialState = [
     {
-      item: 'Learn About Reducers',
+      item: 'This is your first task',
       completed: false,
       id: 1
     },
     {
-      item: 'Get Donuts 🍩',
+      item: 'Click on me and hit remove',
       completed: false,
       id: 2
     }
@@ -33,7 +33,7 @@ export function reducer(state, action) {
     case 'CLEAR_COMPLETED':
       // console.log('clicking clear completed works');
       return state.filter(item => item.completed === false);
-      // default:
-      //   return state;
+      default:
+        return state;
   }
 }

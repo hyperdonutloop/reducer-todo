@@ -10,7 +10,7 @@ const Header = () => {
     <Wrapper>
       <header>
         <img src={logo} alt="react" />
-        <h1 className="things">things ⚡️</h1>
+        <h1 className="things">things <span role="img" aria-label="bolt">⚡️</span></h1>
         <p className="react">don't overreact, get things done</p>
       </header>
     </Wrapper>

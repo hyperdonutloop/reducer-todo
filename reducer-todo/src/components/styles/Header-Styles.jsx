@@ -4,9 +4,15 @@ export const Wrapper = styled.div`
   img {
     margin: auto;
     max-width: 300px;
+    /* border: 2px dashed green; */
+  }
+
+  h1 {
+    margin-bottom: 0.6rem;
   }
 
   .react {
+    margin-top: 0.4rem;
     color: #CE9ECE;
   }
 
@@ -16,6 +22,7 @@ export const Wrapper = styled.div`
 
   .things {
     margin-top: 0.7rem;
+    /* border: 2px dashed green; */
   }
 
 

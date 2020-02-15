@@ -3,7 +3,7 @@ import Todo from './Todo';
 
 const TodoList = ({ state, dispatch }) => {
   const newItem = () => {
-    return state.map(todo => <Todo {...todo} dispatch={dispatch} />)
+    return state.map(todo => <Todo {...todo} key={todo.id} dispatch={dispatch} />)
   };
   return (
     
