@@ -1,10 +1,13 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer } from 'react';
 import './App.css';
+
+//components
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
+import Header from './components/Header.jsx';
 import { reducer, initialState } from './reducers/reducer';
-import './Todo.css';
 
+import { Wrapper } from './components/styles/App-Styles.jsx';
 
 function App() {
   const [ state, dispatch ] = useReducer(reducer, initialState);
@@ -12,43 +15,36 @@ function App() {
   //const state will = initialState
   //dispatch (kind of like setNewItem) is reducer functions
   //reducer functions are like mini setStates
-  const [ newItem, setNewItem ] = useState();
   
-  
-  const handleSubmit = e => {
-    e.preventDefault();
-    console.log('it worked');
-    dispatch({ type: 'ADD_TODO', payload: newItem }) 
-  }
-
-  const handleChanges = e => {
-    setNewItem(e.target.value)
-    console.log(e.target.value);
+  const date = new Date();
+  const weekday = new Array(7);
+  weekday[0] = "It's Sunday, relax 🏖";
+  weekday[1] = "Get motivated, it's Monday ☕️";
+  weekday[2] = "Tuesday's not so bad 🌮";
+  weekday[3] = "You made it to Wednesday 🐪";
+  weekday[4] = "Thursday is Friday-eve 🎄";
+  weekday[5] = "Happy Friday 🙌🏼";
+  weekday[6] = "It's Saturday, go have fun 🏄🏻‍♂️";
     
-  };
-
-  const toggleCompleted = (id) => {
-    dispatch({ type: 'TOGGLE_COMPLETED', payload: id })
-  }
-
-  const clearCompleted = () => {
-    dispatch({ type: 'CLEAR_COMPLETED' })
-  }
-
+  const today = weekday[date.getDay()];
+  console.log(today);
 
   return (
-    <div className="App">
-      <TodoForm 
-        handleSubmit={handleSubmit} 
-        handleChanges={handleChanges} 
-        newItem={newItem}
-      />
-      <TodoList 
-        state={state} 
-        toggleCompleted={toggleCompleted}
-        clearCompleted={clearCompleted}
-      />
-    </div>
+    <Wrapper>
+      <div className="container">
+        <Header />
+        <TodoForm 
+          dispatch={dispatch}
+        />
+        <TodoList
+          state={state} 
+          dispatch={dispatch}
+        />
+        <div className="day">
+          {today}
+        </div>
+      </div>
+    </Wrapper>
   );
 }
 
